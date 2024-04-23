@@ -46,20 +46,20 @@ if y==0:
             print()
             #print("Наибольшее значение =", x1)
             print(f"Второе по величине значение {x2}")
-        elif x2 > x3 > x1: #or x2 > x3 > x1:
+        elif x2 > x3 > x1: #or x2 > x1 > x3:
             print()
             #print("Наибольшее значение =", x2)
             print(f"Второе по величине значение {x3}")
-        elif x3 > x2 > x1: #or x3 > x1 > x1:
+        elif x3 > x2 > x1: #or x3 > x1 > x2:
             print()
             #print("Наибольшее значение =", x3)
             print(f"Второе по величине значение {x2}")
         elif x1 > x3 > x2:
             print(f"Второе по величине значение {x3}")
-        elif x2 > x3 > x1:
-            print(f"Второе по величине значение {x3}")
-        elif x3 > x3 > x2:
-            print(f"Второе по величине значение {x3}")
+        elif x2 > x1 > x3:
+            print(f"Второе по величине значение {x1}")
+        elif x3 > x1 > x2:
+            print(f"Второе по величине значение {x1}")
 else:
     division = x / y
     integer_dision = x // y
