@@ -72,54 +72,67 @@ else:
     x4 = division
     x5 = integer_dision
     # В случае если нет одинаковых значений
-    if x1 > x2 and x1 > x3 and x1 > x4 and x1 > x5:
-        print()
-        print(f"Наибольшое значение {x1}")
-    elif x2 > x1 and x2 > x3 and x2 > x4 and x2 > x5:
-        print()
-        print(f"Наибольшое значение {x2}")
-    elif x3 > x1 and x3 > x2 and x3 > x4 and x3 > x5:
-        print()
-        print(f"Наибольшое значение {x3}")
-    elif x4 > x1 and x4 > x2 and x4 > x3 and x4 > x5:
-        print()
-        print(f"Наибольшое значение {x4}")
-    elif x5 > x1 and x5 > x2 and x5 > x3 and x5 > x4:
-        print()
-        print(f"Наибольшое значение {x5}")
-    else:
-        #Если вдруг какие-то значения дублируются
-        if x1 == x2 or x1 == x3 or x1 == x4 or x1 == x5 or x2 == x3 or x2 == x4 or x2 == x5 or x3 == x4 or x3 == x5 or x4 == x5:
-            if x1 == x2 and x1 >= x3 and x1 >= x4 and x1 >= x5:
-                print()
-                print(f"Наибольшое значение {x1}")
-            elif x1 == x3 and x1 >= x2 and x1 >= x4 and x1 >= x5:
-                print()
-                print(f"Наибольшое значение {x1}")
-            elif x1 == x4 and x1 >= x2 and x1 >= x3 and x1 >= x5:
-                print()
-                print(f"Наибольшое значение {x1}")
-            elif x1 == x5 and x1 >= x2 and x1 >= x3 and x1 >= x4:
-                print()
-                print(f"Наибольшое значение {x1}")
-            elif x2 == x3 and x2 >= x1 and x2 >= x3 and x2 >= x4:
-                print()
-                print(f"Наибольшое значение {x2}")
-            elif x2 == x4 and x2 >= x1 and x2 >= x3 and x2 >= x3:
-                print()
-                print(f"Наибольшое значение {x2}")
-            elif x2 == x5 and x2 >= x1 and x2 >= x3 and x2 >= x4:
-                print()
-                print(f"Наибольшое значение {x2}")
-            elif x3 == x4 and x3 >= x1 and x3 >= x2 and x3 >= x4:
-                print()
-                print(f"Наибольшое значение {x3}")
-            elif x3 == x5 and x3 >= x1 and x3 >= x2 and x3 >= x4:
-                print()
-                print(f"Наибольшое значение {x3}")
-            elif x4 == x5 and x4 >= x1 and x4 >= x2 and x4 >= x3:
-                print()
-                print(f"Наибольшое значение {x4}")
+
+    # Тут я захотел спать и решил всё сделать через список......
+
+    mylist = [x1, x2, x3, x4, x5]
+    mylist.sort()
+    mylist.reverse()
+    print()
+    print(f"Максимальное значение {mylist[0]}")
+    print()
+    print(f"Второе значение после максимального {mylist[1]}")
+
+
+
+   # if x1 > x2 and x1 > x3 and x1 > x4 and x1 > x5:
+   #      print()
+   #      print(f"Наибольшое значение {x1}")
+   #  elif x2 > x1 and x2 > x3 and x2 > x4 and x2 > x5:
+   #      print()
+   #      print(f"Наибольшое значение {x2}")
+   #  elif x3 > x1 and x3 > x2 and x3 > x4 and x3 > x5:
+   #      print()
+   #      print(f"Наибольшое значение {x3}")
+   #  elif x4 > x1 and x4 > x2 and x4 > x3 and x4 > x5:
+   #      print()
+   #      print(f"Наибольшое значение {x4}")
+   #  elif x5 > x1 and x5 > x2 and x5 > x3 and x5 > x4:
+   #      print()
+   #      print(f"Наибольшое значение {x5}")
+   #  else:
+   #      #Если вдруг какие-то значения дублируются
+   #      if x1 == x2 or x1 == x3 or x1 == x4 or x1 == x5 or x2 == x3 or x2 == x4 or x2 == x5 or x3 == x4 or x3 == x5 or x4 == x5:
+   #          if x1 == x2 and x1 >= x3 and x1 >= x4 and x1 >= x5:
+   #              print()
+   #              print(f"Наибольшое значение {x1}")
+   #          elif x1 == x3 and x1 >= x2 and x1 >= x4 and x1 >= x5:
+   #              print()
+   #              print(f"Наибольшое значение {x1}")
+   #          elif x1 == x4 and x1 >= x2 and x1 >= x3 and x1 >= x5:
+   #              print()
+   #              print(f"Наибольшое значение {x1}")
+   #          elif x1 == x5 and x1 >= x2 and x1 >= x3 and x1 >= x4:
+   #              print()
+   #              print(f"Наибольшое значение {x1}")
+   #          elif x2 == x3 and x2 >= x1 and x2 >= x3 and x2 >= x4:
+   #              print()
+   #              print(f"Наибольшое значение {x2}")
+   #          elif x2 == x4 and x2 >= x1 and x2 >= x3 and x2 >= x3:
+   #              print()
+   #              print(f"Наибольшое значение {x2}")
+   #          elif x2 == x5 and x2 >= x1 and x2 >= x3 and x2 >= x4:
+   #              print()
+   #              print(f"Наибольшое значение {x2}")
+   #          elif x3 == x4 and x3 >= x1 and x3 >= x2 and x3 >= x4:
+   #              print()
+   #              print(f"Наибольшое значение {x3}")
+   #          elif x3 == x5 and x3 >= x1 and x3 >= x2 and x3 >= x4:
+   #              print()
+   #              print(f"Наибольшое значение {x3}")
+   #          elif x4 == x5 and x4 >= x1 and x4 >= x2 and x4 >= x3:
+   #              print()
+   #              print(f"Наибольшое значение {x4}")
 
 
 
