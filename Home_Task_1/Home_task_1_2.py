@@ -25,8 +25,17 @@ if y==0:
         elif x2 == x3 and x2 > x1:
             print()
             print(f"Наибольшое значение {x2}")
-        else:
-            print("Все значения равны между собой, чего наверное не может быть")
+        elif x1 == x2 and x1 < x3:
+            print()
+            print(f"Наибольшое значение {x3}")
+        elif x1 == x3 and x1 < x2:
+            print()
+            print(f"Наибольшое значение {x2}")
+        elif x2 == x3 and x2 < x1:
+            print()
+            print(f"Наибольшое значение {x1}")
+
+
     else:
         if x1 > x2 > x3 or x1 > x3 > x2:
             print()
