@@ -1,12 +1,10 @@
 n = input("Введите предложение ")
 #n = 'Я люблю Питон и кофе '
 x = n.split()
-#print(x)
 max1 = 0
 max2 = 0
 maximum = []
 lst = []
-#print(len(max(x)))
 for k, j in enumerate(x):
     if len(j) > max1:
         max1 = len(j)

@@ -10,5 +10,4 @@ while True:
     else:
         summa = summa + n
 sred = summa / p
-
 print(f"Среднее арифметическое значение заработной платы {p} введённых сотрудников равна {sred} у.е.")
