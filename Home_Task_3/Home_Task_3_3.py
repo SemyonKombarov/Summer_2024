@@ -12,7 +12,7 @@ for k, j in enumerate(x):
         max2 = k
         #print(maxi)
     lst.append(len(j))
-    if len(maxi) == len(j):
+    if len(max(x)) == len(j):
         maximum.append(j)
 
 print(f"Первое наибольшее слово в предложении -{n}- это '", maxi, "'")
