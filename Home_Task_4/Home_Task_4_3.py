@@ -13,4 +13,4 @@ for k in s2:
         if k not in dct2: dct2[k] = 1
         else: dct2[k] += 1
 #print(dct1,dct2)
-print("Предлоджения анаграммы?",dct1 == dct2)
+print("Предлоджения анаграммы? ",dct1 == dct2)
