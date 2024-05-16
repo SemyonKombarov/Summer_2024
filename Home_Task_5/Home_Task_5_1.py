@@ -10,7 +10,6 @@
 # for _ in lst:
 #     print(_)
 
-
 n = int(input())
 dct ={}
 for i in range(1,n+1):

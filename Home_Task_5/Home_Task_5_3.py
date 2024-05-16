@@ -8,7 +8,6 @@
 #     print(dct)
 # else:
 #
-
 n = int(input())
 fib = {}
 for i in range(0,n+1):
