@@ -62,7 +62,7 @@ print(a,b)
 coffe = Assortment("Кофе",100)
 tea = Assortment("Чай",200)
 bulka = Assortment("Булка",50)
-print(Cafe.ass)
+print(f"Ассоритмент заведения {Cafe.ass}")
 
 a.zakaz()
 # print(Cafe.doxod)
