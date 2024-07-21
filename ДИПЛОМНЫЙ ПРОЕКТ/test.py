@@ -66,10 +66,6 @@ file_output_full.close()
 df = pd.DataFrame(lst, columns=['Параметр', 'Скважина', 'Год', 'Значение']) # Оптимизированная версия датафрейма
 df_pd = pd.DataFrame(lst_pd,columns=['Параметр','Номер ЛУ','Номер КГС','Номер скважины','Номер ЭО','Год','Значение'])# Полная версия
 
-
-
-
-
 #Группировка и фильтрация по датафреймам
 wellpads_sum_gas_rate = df_pd[df_pd.Параметр == "rate_gas"].groupby(['Параметр',"Номер КГС",'Год']).agg({"Значение":'sum'}).rename(columns = {"Значение":"rate_gas"})
 wellpads_sum_gas_rate.to_csv('wellpads_sum_gas_rate.txt', sep='\t',index =True)
@@ -81,7 +77,6 @@ wellpads_sum_water_rate = df_pd[df_pd.Параметр == "rate_water"].groupby(
 wellpads_sum_water_rate.to_csv('wellpads_sum_water_rate.txt', sep='\t',index =True)
 
 ly_sum_gas_rate = (df_pd[df_pd.Параметр == "rate_gas"].groupby(['Год']).agg({"Значение":'sum'}).rename(columns = {"Значение":"ly_rate_gas"})).max().reset_index()
-
 ly_sum_cond_rate = (df_pd[df_pd.Параметр == "rate_cond"].groupby(['Год']).agg({"Значение":'sum'}).rename(columns = {"Значение":"ly_rate_cond"})).max().reset_index()
 
 #Merge для группы датафреймов
@@ -90,6 +85,7 @@ data = pd.merge(data,wellpads_sum_water_rate, how= "outer", on=["Год","Ном
 data = pd.merge(data,wellpads_min_thp, how= "outer", on=["Год","Номер КГС"])
 data.to_csv('data.txt', sep='\t',index =True)
 
+data.to_excel('data.xlsx',index = True,merge_cells=False)
 
 total_wells = set()
 for i in lst:
@@ -129,6 +125,6 @@ for j in sorted(list(total_wellpads)):
             y = x[i].unique()
             print(f" Общее количество скважин на КГС {j} - {len(y)} штук")
 
-# print(df_pd[df_pd["Номер КГС","Параметр"]])
+
 
 
